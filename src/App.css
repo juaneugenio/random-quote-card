@@ -173,6 +173,25 @@ body {
 #tweet-quote:hover::before {
 	transform: scaleY(1); /* Expande la línea de izquierda a derecha */
 }
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 0.8rem;
+	color: #f7fbff;
+	font-weight: normal;
+	text-shadow: 2px 2px 3px rgba(12, 9, 9, 0.3);
+}
+
+#footer a {
+	color: #9bc8f6;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: italic;
+	font-weight: bold;
+}
 
 /* Responsividad */
 @media (max-width: 600px) {

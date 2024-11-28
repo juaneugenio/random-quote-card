@@ -47,6 +47,13 @@ function App() {
 			<div className="cloud-background" id="cloud2"></div>
 			<div className="cloud-background" id="cloud3"></div>
 			<Card quoteTxt={quote} getRandomQuote={getQuotes} bgColor={bgColor1} />
+			<p id="footer">
+				Done by{" "}
+				<a href="https://github.com/juaneugenio" target="_blank" rel="noopener noreferrer">
+					Eugenio JC
+				</a>
+				- <span>2023</span>
+			</p>
 		</>
 	);
 }
