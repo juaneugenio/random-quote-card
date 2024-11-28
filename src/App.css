@@ -1,0 +1,191 @@
+/** @format */
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(135deg, #071034, #340365);
+	position: relative;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+		"Helvetica Neue", sans-serif;
+	overflow: hidden;
+}
+
+.cloud-background {
+	position: absolute;
+	width: 20vw;
+	height: 55vh;
+	border-radius: 100%;
+	filter: blur(100px);
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#cloud1 {
+	animation: rotate1 20s linear infinite;
+}
+
+@keyframes rotate1 {
+	from {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+#cloud2 {
+	background: rgb(131, 58, 180);
+	background: linear-gradient(90deg, rgba(131, 58, 180, 1) 7%, rgba(253, 29, 29, 1) 63%, rgba(252, 176, 69, 1) 100%);
+	animation: rotate2 10s linear infinite;
+}
+@keyframes rotate2 {
+	from {
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(270deg);
+	}
+}
+#cloud3 {
+	background: rgb(206, 142, 249);
+	background: linear-gradient(
+		90deg,
+		rgba(206, 142, 249, 1) 21%,
+		rgba(33, 116, 255, 0.9052214635854342) 61%,
+		rgba(69, 252, 72, 1) 100%
+	);
+	animation: rotate3 15s linear infinite;
+	border-radius: 75%;
+}
+@keyframes rotate3 {
+	from {
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(180deg);
+	}
+}
+#quote-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(6.5px);
+	-webkit-backdrop-filter: blur(6.5px);
+	padding: 2rem;
+	border-radius: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	max-width: 90%;
+	width: 100%;
+	max-width: 375px;
+	margin: 1rem;
+	box-sizing: border-box;
+}
+
+#text {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
+	color: #f7fbff;
+	font-weight: normal;
+	text-shadow: 2px 2px 3px rgba(12, 9, 9, 0.3);
+}
+
+#author {
+	font-weight: bold; /* Negrita para el autor */
+	text-align: right; /* Alinea el texto del autor a la derecha */
+	width: 100%;
+	color: #f3ecec;
+	font-weight: bolder;
+	font-style: italic;
+}
+.content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+#tweet-quote {
+	font-size: 1.2rem;
+	color: #f2f3f4;
+	text-decoration: none;
+	font-weight: normal;
+	text-shadow: 2px 2px 3px rgba(12, 9, 9, 0.3);
+	margin-right: auto;
+}
+/* -------------------button */
+
+#new-quote {
+	font-family: inherit;
+	font-weight: bolder;
+	font-size: inherit;
+	padding: 1rem;
+	color: white;
+	text-shadow: 2px 2px 3px rgba(35, 26, 26, 0.7);
+
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	opacity: 1;
+	margin-left: auto;
+	transition: box-shadow 0.1s ease-in-out;
+}
+
+#new-quote:hover {
+	border: 0.1px solid #ffffff;
+	box-shadow: 0 0 10px #ffffff, 0 0 15px #00a8b4, 0 0 20px #ffffff;
+}
+#new-quote:active {
+	position: relative;
+	top: 2px;
+}
+/* -------------- */
+#tweet-quote {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	color: #062a4f;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 1rem;
+
+	position: relative;
+}
+#tweet-quote::before {
+	content: "";
+	position: absolute;
+	bottom: -2px; /* Ajusta la posición vertical según sea necesario */
+	left: 0;
+	width: 100%;
+	height: 1px; /* Grosor de la línea */
+	background-color: #000000; /* Color de la línea */
+	transform-origin: left;
+	transform: scaleX(0);
+	transition: transform 0.2s ease-out; /* Duración y tipo de transición */
+}
+#tweet-quote:hover {
+	transform: scale(1.1);
+	transition: ease-in-out 0.3s;
+}
+#tweet-quote:hover::before {
+	transform: scaleY(1); /* Expande la línea de izquierda a derecha */
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+	.quote-text {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.quote-text {
+		font-size: 1rem;
+	}
+	#author {
+		font-size: 0.9rem;
+	}
+}
