@@ -6,12 +6,13 @@
 
 **Random Quote Card** is a web application that generates random quotes along with a dynamic background color. It uses an API from a JSON file to fetch quotes and allows users to see a new quote each time the page loads or a button is clicked. The application features a user-friendly interface and integration with Twitter for sharing quotes.
 
+![Random Quote Generator image](./public/app-picture.jpeg)
+
 ## Features
 
 - Random quote generation.
 - Dynamic background color changes.
-- Share quotes on Twitter.
-- Simple and intuitive user interface.
+- Simple, intuitive and responsive user interface.
 
 ## Technologies Used
 
